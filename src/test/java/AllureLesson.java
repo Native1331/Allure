@@ -10,21 +10,21 @@ import static org.openqa.selenium.By.partialLinkText;
 
 public class AllureLesson {
 
-        @Test
-        public void testGithubIssue() {
+    @Test
+    public void testGithubIssue() {
 
-              SelenideLogger.addListener("allure", new AllureSelenide());
-            open ("https://github.com");
-            $(".header-search-input").click();
-            $(".header-search-input").sendKeys("eroshenkoam/allure-example");
-            $(".header-search-input").submit();
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        open("https://github.com");
+        $(".header-search-input").click();
+        $(".header-search-input").sendKeys("eroshenkoam/allure-example");
+        $(".header-search-input").submit();
 
-            $(linkText("eroshenkoam/allure-example1111")).click();
-            $(partialLinkText("Issues")).click();
-            $(withText("#76")).click();
+        $(linkText("eroshenkoam/allure-example1111")).click();
+        $(partialLinkText("Issues")).click();
+        $(withText("#76")).click();
 
 
-        }
     }
+}
 
 

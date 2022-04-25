@@ -45,11 +45,11 @@ public class WebSteps {
         attachScreenshot();
     }
 
-        @Attachment(value = "Мой любимый скриншот", type = "image/png", fileExtension = "png")
-        public TakeScreenshot attachScreenshot() {
-            return ((TakeScreenshot)WebDriverRunner.getWebDriver());
-        }
+    @Attachment(value = "Мой любимый скриншот", type = "image/png", fileExtension = "png")
+    public TakeScreenshot attachScreenshot() {
+        return ((TakeScreenshot) WebDriverRunner.getWebDriver());
     }
+}
 
 
 

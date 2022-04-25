@@ -3,23 +3,23 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 
-     public class AnnotateStepTest {
+public class AnnotateStepTest {
 
-        private static final String REPOSITORY = "eroshenkoam/allure-example";
-        private static final int ISSUE_NUMBER = 68;
+    private static final String REPOSITORY = "eroshenkoam/allure-example";
+    private static final int ISSUE_NUMBER = 68;
 
-        @Test
-        public void testGithubIssue() {
-            SelenideLogger.addListener("allure", new AllureSelenide());
-            WebSteps steps = new WebSteps();
+    @Test
+    public void testGithubIssue() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        WebSteps steps = new WebSteps();
 
-            steps.openMainPage();
-            steps.searchForRepository(REPOSITORY);
-            steps.clickOnRepositoryLink(REPOSITORY);
-            steps.openIssueTab();
-            steps.shouldSeeIssueWithNumber(ISSUE_NUMBER);
-        }
+        steps.openMainPage();
+        steps.searchForRepository(REPOSITORY);
+        steps.clickOnRepositoryLink(REPOSITORY);
+        steps.openIssueTab();
+        steps.shouldSeeIssueWithNumber(ISSUE_NUMBER);
     }
+}
 
 
 

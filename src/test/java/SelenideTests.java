@@ -13,29 +13,27 @@ import static org.openqa.selenium.By.partialLinkText;
 public class SelenideTests {
 
 
-
-
     @Owner("eroshenkoam")
     @Severity(SeverityLevel.BLOCKER)
     @Feature("Задачи в репозитории")
     @Story("Просмотр созданных задач в репозитории")
-    public class SelenideTest {
 
-        @Test
-        @DisplayName("Хороший тест")
-        public void testGithubIssue() {
-            SelenideLogger.addListener("allure", new AllureSelenide());
 
-            open("https://github.com");
+    @Test
+    @DisplayName("Хороший тест")
+    public void testGithubIssue() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
-            $(".header-search-input").click();
-            $(".header-search-input").sendKeys("eroshenkoam/allure-example");
-            $(".header-search-input").submit();
+        open("https://github.com");
 
-            $(linkText("eroshenkoam/allure-example")).click();
-            $(partialLinkText("Issues")).click();
-            $(withText("#76")).click();
-        }
+        $(".header-search-input").click();
+        $(".header-search-input").sendKeys("eroshenkoam/allure-example");
+        $(".header-search-input").submit();
 
+        $(linkText("eroshenkoam/allure-example")).click();
+        $(partialLinkText("Issues")).click();
+        $(withText("#76")).click();
     }
+
 }
+

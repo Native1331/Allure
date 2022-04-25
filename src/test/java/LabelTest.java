@@ -16,8 +16,9 @@ public class LabelTest {
     @Link(value = "Тестинг", url = "https://github.com")
     public void testAnnotated() {
     }
+
     @Test
-    public void testCode(){
+    public void testCode() {
         Allure.label("owner", "eroshenroam");
         Allure.label("severity", SeverityLevel.CRITICAL.value());
         Allure.feature("Задачи в репозитории");
